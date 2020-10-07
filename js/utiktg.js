@@ -9,7 +9,7 @@ let monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 // Alap dátumok beállítása: rendszerdátum és rendszeridő lekérdezése, lekérdezett hónap értékének áttöltése a date változóba, aktuláis hónap hosszának betöltése
 // az actulMonthLength változóba, a monthLength tömbből a month változó értéke szerint kikeresett érték alapján
 let date = new Date();
-console.log(date);
+
 let today = date;
 let todayDay = today.getDate();
 let todayMonth = today.getMonth();
@@ -23,8 +23,6 @@ let leapYear = actualYear;
 if (leapYear = ((leapYear % 4 == 00 && leapYear % 100 != 0) || leapYear % 400 == 0)) {
   monthLength = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 } else monthLength = monthLength;
-
-console.log(actualYear);
 
 let month = date.getMonth();
 month = month - 1; // EZT KELL kivenni és megcsinálni a hónap választást!!!!!
