@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib\bootstrap-4.5.0-dist\css\bootstrap.min.css">
+    
+    <style type="text/css" media="print">
+        @page {
+            size: A4;
+           /* auto is the current printer page size */
+            /*margin: top, right, bottom, left */
+            margin: 5mm 10mm;
+        }
+
+        body {
+            margin: 2.5em 0em 0em 0em;
+        }
+    </style>
+    
+    <style>
+        tr {
+            height: 32px;
+        }
+    </style>
+
+    <title>Útiköltség elszámolás nyomtatvány</title>
+
+</head>
+
+<body id="printWindowBody">
+    <div class="container" id="container">
+        <div class="title text-center" id="mainTitle">
+            <h4><strong>Munkába járás elszámolása</strong></h4>
+        </div>
+        <div class="paragraph text-center" id="yearAndMonth">
+
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="paragraph" id="jure">
+            Az elszámolás alapja a 39/2010. számú Kormányrendelet, mely alapján gépjárműre fizethető 9 Ft/km
+            költségtérítés.
+        </div>
+        <div>
+
+        </div>
+        <div class="paragraph" id="nameAndAddress">
+            
+        </div>
+        <div class="paragraph" id="carTypeAndPlate">
+            
+        </div>
+        <div>
+            <br>
+        </div>
+        <div>
+            <table class="table table-bordered table-striped table-sm" id="printTable">
+                <thead class="text-center thead-dark">
+                    <tr>
+                        <th>
+                           Dátum
+                        </th>
+                        <th>
+                            Indulás - érkezés (helység)
+                        </th>
+                        <th>
+                            Km/fő
+                        </th>
+                        <th>
+                            Összeg
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="printTableBody">
+
+                </tbody>
+                <tfoot class="table-dark text-right font-weight-bold">
+                    <tr>
+                        <td></td>
+                        <td>Összesen:</td>
+                        <td></td>
+                        <td id="sumPrice"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="paragaph" id="date">
+
+        </div>
+        <div>
+            <br>
+            <br>
+        </div>
+        <div>
+            <table id="signTable" name="signTable" class="table table-borderless text-center">
+                <tr>
+                    <td>..................................................<br>munkahelyi vezető</td>
+                    <td>..................................................<br>munkavállaló</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
