@@ -1,6 +1,6 @@
 //Alapadatok definiálása (munkahely, Ft/km) költségtérítés megadása
-let workCity = "Hévíz";
-let forintKm = 9;
+let workCity = "Hévíz"; // Használni is kellene, ha már deklaráltad, sőt definiáltad is.
+let forintKm = 9; // Később ehelyett is listából kellene választani.
 
 // Hónapok neveinek és alap hosszuknak tömbökbe töltése
 let monthName = ["január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "október", "november", "december"];
@@ -18,8 +18,8 @@ let todayDate = today.setFullYear(todayYear, todayMonth, todayDay);
 let actualYear = date.getFullYear();
 let doneDate = todayDate;
 
-let leapYear = actualYear;
 //leapYear, azaz szökőév vizsgálata -- s elég egy sima if-else nem kell függvény (function) hozzá. Így szebb és rövidebb a kód!
+let leapYear = actualYear;
 if (leapYear = ((leapYear % 4 == 00 && leapYear % 100 != 0) || leapYear % 400 == 0)) {
   monthLength = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 } else monthLength = monthLength;
@@ -93,31 +93,31 @@ tBody.appendChild(tr);
 document.querySelector("#print").addEventListener("click", function () {
   stringsToPrint = {}; // az objektum kiürítése az adatgyűjtés előtt
   getStringsToPrint("input.nyomtatvany", stringsToPrint); // a nyomtatvány többi input field-jét RENDELD HOZZÁ a "nyomtatvany" osztályhoz!
-  console.log(stringsToPrint);
+  //console.log(stringsToPrint);
 });
 
 
 document.querySelector("#print").addEventListener("click", function () {
   dataToPrint = []; // a tömb kiürítése az adatgyűjtés előtt
   getDataToPrint("input.checkbox", dataToPrint);
-  console.log(dataToPrint);
+  //console.log(dataToPrint);
 });
 
 
 document.querySelector("#print").addEventListener("click", function () {
   dataToCalc = [];
   getDataToCalc("input.checkbox", dataToCalc);
-  console.log(dataToCalc);
+  //console.log(dataToCalc);
 });
 
 
 document.querySelector("#print").addEventListener("click", function () {
-  console.log(dataToPrint);
-  console.log(stringsToPrint);
+  //console.log(dataToPrint);
+  //console.log(stringsToPrint);
   lastSelectedDay = dataToCalc[dataToCalc.length - 1];
-  console.log(lastSelectedDay);
-  console.log, date;
-  console.log(todayDate);
+  //console.log(lastSelectedDay);
+  //console.log, date;
+  //console.log(todayDate);
   
   if (new Date(lastSelectedDay).getMonth() < new Date(todayDate).getMonth()) {
     doneDate = todayDate
@@ -125,7 +125,7 @@ document.querySelector("#print").addEventListener("click", function () {
     doneDate = lastSelectedDay
   } else doneDate = todayDate;
 
-  console.log(doneDate);
+  //console.log(doneDate);
 
   doneDate = parseDate(doneDate);
 
