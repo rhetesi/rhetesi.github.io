@@ -64,7 +64,7 @@ for (let i = 0; i < actualMonthLength; i++) {
   td = createAnyElement("td"/*, {class: "text-center"}*/);
   let checkBox = createAnyElement("input", {
     type: "checkbox",
-    class: "checkbox",
+    class: "form-check-input checkbox", /* a form-chek-input mit is csinál? */
     id: day,    
     name: `${actualYear}. ${month + 1}. ${day}.`, 
     value: date.setFullYear(actualYear, month, day)
