@@ -36,6 +36,14 @@ if (beforeMonth < 0) {
   actualYear = actualYear - 1;
 } else beforeMonth = beforeMonth; actualYear = actualYear
 
+/*let monthValue = [
+    "Kérem válasszon hónapot!",
+    beforeMonth,
+    actualMonth
+]
+lista automatikus lekérése: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_options_selindex
+*/
+
 // nyomtatandók (már itt lehetne objektum és tömb) deklarálása, ezekbe szedjük majd össze az adatokat
 var stringsToPrint;
 var dataToPrint;
