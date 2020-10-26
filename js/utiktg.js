@@ -49,12 +49,22 @@ document.getElementById("actualMonth").innerHTML = monthName[actualMonth];
 
 
 function monthselect() {
-  let select = document.getElementById("monthInput");
-  let month = select.selectedIndex;
-  
+  console.log(month);
+  monthSelect = document.getElementById("monthInput").selectedIndex;
+  console.log(monthSelect);
+  if (monthSelect = 1) {
+    month = actualMonth;
+  } else {
+    month = beforeMonth;
+  }
+  //return month;
+  //let select = document.getElementById("monthInput");
+  //month = select.selectedIndex;
+  console.log(month);
+  //return month;
   //document.getElementById("demo").innerHTML = select.options[month].text;
 }
-
+console.log(month);
 
 // nyomtatandók (már itt lehetne objektum és tömb) deklarálása, ezekbe szedjük majd össze az adatokat
 var stringsToPrint;
