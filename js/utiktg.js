@@ -25,7 +25,7 @@ if (leapYear = ((leapYear % 4 == 00 && leapYear % 100 != 0) || leapYear % 400 ==
 } else monthLength = monthLength;
 
 let month = date.getMonth();
-month = month - 1; // EZT KELL kivenni és megcsinálni a hónap választást!!!!!
+//month = month - 1; // EZT KELL kivenni és megcsinálni a hónap választást!!!!!
 let actualMonth = month;
 let actualMonthLength = monthLength[month];
 let beforeMonth = actualMonth - 1;
@@ -43,6 +43,18 @@ if (beforeMonth < 0) {
 ]
 lista automatikus lekérése: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_select_options_selindex
 */
+
+document.getElementById("beforeMonth").innerHTML = monthName[beforeMonth];
+document.getElementById("actualMonth").innerHTML = monthName[actualMonth];
+
+
+function monthselect() {
+  let select = document.getElementById("monthInput");
+  let month = select.selectedIndex;
+  
+  //document.getElementById("demo").innerHTML = select.options[month].text;
+}
+
 
 // nyomtatandók (már itt lehetne objektum és tömb) deklarálása, ezekbe szedjük majd össze az adatokat
 var stringsToPrint;
@@ -101,39 +113,33 @@ tBody.appendChild(tr);
 document.querySelector("#print").addEventListener("click", function () {
   stringsToPrint = {}; // az objektum kiürítése az adatgyűjtés előtt
   getStringsToPrint("input.nyomtatvany", stringsToPrint); // a nyomtatvány többi input field-jét RENDELD HOZZÁ a "nyomtatvany" osztályhoz!
-  //console.log(stringsToPrint);
+ 
 });
 
 
 document.querySelector("#print").addEventListener("click", function () {
   dataToPrint = []; // a tömb kiürítése az adatgyűjtés előtt
   getDataToPrint("input.checkbox", dataToPrint);
-  //console.log(dataToPrint);
+  
 });
 
 
 document.querySelector("#print").addEventListener("click", function () {
   dataToCalc = [];
   getDataToCalc("input.checkbox", dataToCalc);
-  //console.log(dataToCalc);
+  
 });
 
 
 document.querySelector("#print").addEventListener("click", function () {
-  //console.log(dataToPrint);
-  //console.log(stringsToPrint);
-  lastSelectedDay = dataToCalc[dataToCalc.length - 1];
-  //console.log(lastSelectedDay);
-  //console.log, date;
-  //console.log(todayDate);
   
+  lastSelectedDay = dataToCalc[dataToCalc.length - 1];
+    
   if (new Date(lastSelectedDay).getMonth() < new Date(todayDate).getMonth()) {
     doneDate = todayDate
   } else if (lastSelectedDay != todayDate) {
     doneDate = lastSelectedDay
   } else doneDate = todayDate;
-
-  //console.log(doneDate);
 
   doneDate = parseDate(doneDate);
 
